@@ -46,6 +46,9 @@ Use a simple 2x2 rather than a single score for routing decisions:
 ### Decay
 Set an explicit decay rule (e.g. engagement score drops by X% per Y days of inactivity). Without decay, a lead who was highly engaged three months ago and has since gone silent still looks "hot," which misleads whoever acts on the score.
 
+### Calibration against outcomes
+A scoring model set once at launch and never revisited drifts out of sync with reality. Periodically check score weights against actual closed-won/closed-lost outcomes: if a firmographic trait or source channel that scores as "high fit" keeps showing up in closed-lost deals, its weight is wrong and should come down; if a trait scored low keeps closing, it should go up. This closed-loop calibration is what keeps a scoring model predictive instead of just plausible-looking — do it on a fixed cadence (e.g. quarterly) rather than only when someone notices a problem.
+
 ---
 
 ## 3. Common Mistakes
