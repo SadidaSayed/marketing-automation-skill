@@ -49,6 +49,8 @@ Split effort across three buckets. Don't let one bucket crowd out the others.
 
 Use `WebSearch` / `WebFetch` for open-web sources, and the Apollo.io and Clay MCP tools (see Section 6) for structured company/contact/signal data. Don't fabricate a company, signal, or LinkedIn profile — if you can't verify it from a real source in this session, leave it out rather than guessing.
 
+**Geography: actively include GCC, UK, and Central Asia alongside US/EU.** These markets get less consultancy-market attention than the saturated US/EU startup-advisory space, which raises the realistic odds of landing a first conversation even at similar or better fit. Search GCC (Saudi Arabia, UAE, wider Gulf), UK, and Central Asia (Kazakhstan, Uzbekistan, etc.) every run, not just as a fallback when US/EU comes up thin — treat it as a standing part of the sweep, not a one-off. Central Asia in particular is growing fast at the ecosystem level but individual dated, named-company signals are harder to find there; don't force a weak Central Asia lead onto the list just to represent the region — note it as a watch area instead when nothing clears the bar.
+
 ---
 
 ## 4. Running the Scout
@@ -80,12 +82,12 @@ Every opportunity write-up should name the specific problem(s) from this list th
 
 Both are connected in this workspace and do different jobs — use them together rather than picking one:
 
-- **Clay = sourcing & enrichment layer.** Use it to find and enrich companies/contacts against the ICP (headcount, funding stage, LinkedIn, firmographic data) before they're qualified as an opportunity. This is upstream of the scout's output — it feeds candidates in, it doesn't track what happens after.
-- **Apollo = system of record & outreach layer.** Once a company clears the bar and makes the daily top 10, log it as an Apollo Account with the decision-maker as a Contact, tag it by bucket (`direct-client` / `referral-partner` / `trigger-opportunity`) and urgency via labels, and use Apollo Tasks/Sequences to actually manage the introduction path and follow-up. Apollo's job-postings and website-visitor tools are also useful for corroborating hiring/expansion signals directly.
+- **Clay = primary sourcing & enrichment layer.** On this account it works with no per-call paywall: `find-and-enrich-company` / `find-and-enrich-contacts-at-company` / `find-and-enrich-list-of-contacts` reliably return firmographics, decision-maker names, LinkedIn profiles, and verified work emails once you already have a company (domain or LinkedIn URL) from web research. This is the default path for names + emails — try it before reaching for Apollo.
+- **Apollo = optional cross-check / future outreach layer.** `organizations_enrich` (single-domain firmographic lookup) works and is free to try, but company-search and people-search/match are paywalled on this plan (see limitation below) — don't spend time retrying them. If Apollo's plan is ever upgraded, it can also serve as the system of record (Accounts/Contacts/Tasks) for managing outreach, but nothing is configured there today.
 
-In short: **Clay finds and enriches, Apollo tracks and drives outreach.** Nothing is configured yet on either side (this Clay workspace has no custom subroutines set up, and no accounts/contacts have been created in Apollo for this) — say so before assuming either is populated, and confirm with the user before writing records into either system.
+In short: **Clay finds, enriches, and gets the email; Apollo (today) is a free firmographic sanity-check, nothing more.** Confirm with the user before writing records into either system as a CRM.
 
-**Known plan limitation (confirmed in production, Aug 2026):** on this Apollo plan, the company-search (`mixed_companies/search`) and people-search/match endpoints return "not included in Free plan" errors — only `organizations_enrich` (single-domain lookup) works. This means Apollo cannot be used to *discover* companies or reveal decision-maker emails on the current plan; only to verify firmographics for a company you already have a domain for. Actual sourcing runs through `WebSearch` (funding news, launches, hiring signals) and Clay's `find-and-enrich-contacts-at-company` / `find-and-enrich-list-of-contacts` tools for decision-maker names, LinkedIn profiles, and work emails. Re-check this each run — an Apollo plan upgrade would restore direct search and shift sourcing back onto Apollo.
+**Known plan limitation (confirmed in production, Aug 2026):** on this Apollo plan, the company-search (`mixed_companies/search`) and people-search/match endpoints return "not included in Free plan" errors — only `organizations_enrich` (single-domain lookup) works, and even that just confirms firmographics, it doesn't reveal emails. Don't burn turns retrying Apollo search/match. Sourcing runs on `WebSearch` (funding news, launches, hiring signals) to find the company, then Clay to get the decision-maker and their verified email — that combination has covered every opportunity logged so far at no additional cost beyond what's already included in the Clay workspace.
 
 ---
 
