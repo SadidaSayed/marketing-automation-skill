@@ -23,6 +23,8 @@ Web3, neobanks, and brand-new startups are valid ICP categories, not a stretch �
 
 A company with 5 of 8 criteria and a strong signal beats a company with 8 of 8 and no signal — fit alone never justifies a recommendation without Section 2 below.
 
+**Prefer smaller and quieter over bigger and louder, all else equal.** Within the 15–300 employee band, actively favor the lower end (roughly 6–60) and rounds that closed with little or no major-press pickup (second-tier funding sites, founder LinkedIn posts, regional/community press) over headline raises covered by TechCrunch, Businesswire, or a VC's own blog. A $150M Series B at a $2B valuation already has inbound from every growth consultant in the market; a 6-person team that just closed $2M almost certainly doesn't. This does lower budget-fit scores in the rubric below — score that honestly rather than inflating it to justify the pick. The case for a smaller company is reduced competition and easier access, not a bigger check.
+
 ---
 
 ## Buying Signals (the actual filter)
