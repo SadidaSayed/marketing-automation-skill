@@ -85,6 +85,8 @@ Both are connected in this workspace and do different jobs — use them together
 
 In short: **Clay finds and enriches, Apollo tracks and drives outreach.** Nothing is configured yet on either side (this Clay workspace has no custom subroutines set up, and no accounts/contacts have been created in Apollo for this) — say so before assuming either is populated, and confirm with the user before writing records into either system.
 
+**Known plan limitation (confirmed in production, Aug 2026):** on this Apollo plan, the company-search (`mixed_companies/search`) and people-search/match endpoints return "not included in Free plan" errors — only `organizations_enrich` (single-domain lookup) works. This means Apollo cannot be used to *discover* companies or reveal decision-maker emails on the current plan; only to verify firmographics for a company you already have a domain for. Actual sourcing runs through `WebSearch` (funding news, launches, hiring signals) and Clay's `find-and-enrich-contacts-at-company` / `find-and-enrich-list-of-contacts` tools for decision-maker names, LinkedIn profiles, and work emails. Re-check this each run — an Apollo plan upgrade would restore direct search and shift sourcing back onto Apollo.
+
 ---
 
 ## 7. Quality Bar — Non-Negotiables
