@@ -17,7 +17,9 @@ Prioritise companies meeting **most** of these criteria (not all — treat as a 
 - Hiring across Growth, Marketing, Operations, or Business Development
 - Scaling rapidly (headcount, revenue, or market footprint)
 
-**Target industries**: AI, FinTech, SaaS, Enterprise Software, B2B Technology, Infrastructure/API, Developer Tools, Digital Assets, Marketplaces, high-growth D2C.
+**Target industries**: AI, FinTech, Neobanks, SaaS, Enterprise Software, B2B Technology, Infrastructure/API, Developer Tools, Digital Assets, Web3/crypto protocols, Marketplaces, high-growth D2C, and new/early-stage startups generally where a real signal exists.
+
+Web3, neobanks, and brand-new startups are valid ICP categories, not a stretch — include them on the same footing as the rest of the list. The bar doesn't change for them: a real, dated, verifiable signal and a named decision-maker, same as everything else. Don't add a Web3/neobank/new-startup entry just to check the box — leave the slot empty (or note it as a watch item) if nothing in that category clears the bar on a given run.
 
 A company with 5 of 8 criteria and a strong signal beats a company with 8 of 8 and no signal — fit alone never justifies a recommendation without Section 2 below.
 
